@@ -25,6 +25,31 @@ cargo run -- --probe
 The app talks to the board through Vial raw HID, so it can highlight the actual
 switch matrix instead of guessing from normal OS key events.
 
+## Prerequisites
+
+Vial does not need to be installed to run this viewer. The viewer talks directly
+to the keyboard through the same raw HID interface that Vial uses.
+
+Required:
+
+- Sofle Plus 2 connected by USB
+- Firmware with Vial/raw-HID enabled
+- Telemetry-enabled firmware for live layer and touchpad tracking
+- Close Vial while the viewer is running, because both apps use the same raw HID
+  interface
+
+Linux:
+
+- A graphical desktop session, X11 or Wayland
+- Permission to read and write the keyboard hidraw device
+- Rust stable toolchain if building or installing from this source repo
+
+Windows:
+
+- Windows 10 or newer
+- Rust stable toolchain if building or installing from this source repo
+- No separate Vial install or driver should be needed for normal HID access
+
 ## Install
 
 Linux:
