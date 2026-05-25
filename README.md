@@ -50,6 +50,23 @@ Windows:
 - Rust stable toolchain if building or installing from this source repo
 - No separate Vial install or driver should be needed for normal HID access
 
+## Keymaps And Layers
+
+The Vial desktop app is not the source of the keymap. The source is the
+keyboard firmware and the dynamic keymap data stored on the keyboard.
+
+On startup and when pressing `Reload keymap`, the viewer asks the keyboard for:
+
+- VIA/Vial protocol version
+- Number of dynamic keymap layers
+- Keycode at each layer/row/column position
+- Layer names when the firmware exposes them
+
+Live active layer, pressed keys, and touchpad contact data come from the
+telemetry feature added to the firmware. If that telemetry is missing, the
+viewer can still read the matrix through the Vial raw-HID fallback, but active
+layer tracking is less exact.
+
 ## Install
 
 Linux:
