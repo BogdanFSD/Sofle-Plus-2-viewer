@@ -1,0 +1,15 @@
+[package]
+name = "sofle-plus2-viewer"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+
+[dependencies]
+eframe = "0.28.1"
+winit = "0.29.15"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+hidapi = { version = "2.6.6", default-features = false, features = ["windows-native"] }
