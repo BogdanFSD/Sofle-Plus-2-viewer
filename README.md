@@ -50,6 +50,17 @@ Windows:
 - Rust stable toolchain if building or installing from this source repo
 - No separate Vial install or driver should be needed for normal HID access
 
+## Firmware
+
+Telemetry firmware source and UF2 files are published in the Vial-QMK fork:
+
+- Source branch:
+  [BogdanFSD/vial-qmk/tree/sofleplus2-tps65-telemetry](https://github.com/BogdanFSD/vial-qmk/tree/sofleplus2-tps65-telemetry)
+- UF2 release:
+  [sofleplus2-tps65-telemetry-v0.1.0](https://github.com/BogdanFSD/vial-qmk/releases/tag/sofleplus2-tps65-telemetry-v0.1.0)
+
+Flash the left UF2 to the left half and the right UF2 to the right half.
+
 ## Keymaps And Layers
 
 The Vial desktop app is not the source of the keymap. The source is the
